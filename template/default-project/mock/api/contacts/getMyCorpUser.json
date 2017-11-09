@@ -1,0 +1,160 @@
+{
+  "data": [
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/account.png",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "",
+      "id": 1001,
+      "mobile": "13041028771",
+      "name": "13041028771",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "13041028771",
+      "yhtId": "0402e9a0-8780-4399-957e-259886b96dd6"
+    },
+    {
+      "birthday": "",
+      "companyId": "[1,2]",
+      "companyName": "玩事体验公司/用友网络",
+      "email": "zhenglq@yonyou.com",
+      "id": 1002,
+      "mobile": "13810876954",
+      "name": "",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "13810876954(zhenglq@yonyou.com)",
+      "yhtId": "d3b87a3c-bdf5-4302-a7c3-cb669c1ad3e5"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/2017/10/10/dcadb476-2b09-4734-9f32-ae818f7fa91f.jpg",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "",
+      "id": 1003,
+      "mobile": "18792418766",
+      "name": "18792418766",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "18792418766",
+      "yhtId": "de44b75b-35b3-4fbf-bcd6-9e82df8d3cbe"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/2017/09/21/a66606f9-41d0-4321-81d9-1ea2c7a2e49a.jpg",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "chenq*****@yonyou.com",
+      "id": 1004,
+      "mobile": "18612562550",
+      "name": "陈庆明",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "陈庆明(chenq*****@yonyou.com)",
+      "yhtId": "uspace_182251"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/account.png",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "",
+      "id": 1005,
+      "mobile": "13621306445",
+      "name": "",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "曹晓晨",
+      "yhtId": "fe2f3227-c94e-4063-bebb-b8e99a09b61c"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/2017/09/21/85052bc0-c7c7-4d66-913f-939e249e939b.jpg",
+      "birthday": "",
+      "companyId": "[2,1]",
+      "companyName": "用友网络/玩事体验公司",
+      "email": "zhenglq@yonyou.com",
+      "id": 1006,
+      "mobile": "13810876954",
+      "name": "13810876954",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "逗你玩(zhenglq@yonyou.com)",
+      "yhtId": "9a8c4044-df5a-49e7-95cb-3df56a26927f"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/account.png",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "",
+      "id": 1007,
+      "mobile": "18610556040",
+      "name": "18610556040",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "董玉博",
+      "yhtId": "9ffa2b18-07cf-40b4-8482-4903b464f299"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/account.png",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "huzw@yonyou.com",
+      "id": 1008,
+      "mobile": "13699259112",
+      "name": "胡尊文",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "胡尊文(huzw@yonyou.com)",
+      "yhtId": "7d43733a-a550-4b40-8ee2-791d7ed23641"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/2017/09/21/93845caf-365a-4ac2-ad67-10e3e265a1b7.jpg",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "",
+      "id": 1009,
+      "mobile": "18676793714",
+      "name": "姜振亚",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "18676793714",
+      "yhtId": "089e82e1-908c-4f26-bddd-a82abc8603c9"
+    },
+    {
+      "avatar": "https://hongbao-cdn.yonyoucloud.com//uculture/app/user-avator/2017/10/13/6b574309-75f0-4fd8-bee3-ac0b94b8dcb1.jpg",
+      "birthday": "",
+      "companyId": "[1]",
+      "companyName": "玩事体验公司",
+      "email": "liang*****@yonyou.com",
+      "id": 1010,
+      "mobile": "18519264966",
+      "name": "梁根意",
+      "sex": 0,
+      "staffNo": "",
+      "userName": "梁根意(liang*****@yonyou.com)",
+      "yhtId": "57c19740-06d1-4efb-bb8a-285d0655b1f9"
+    }
+  ],
+  "metaData":{
+    "clientType":"android",
+    "companyName": {
+      "color": "#666"
+    },
+    "mobile": {
+      "display": "none",
+      "fontSize": "0.24rem",
+      "color": "#999"
+    },
+    "userName": {
+      "color": "#333",
+      "fontSize": "0.32rem"
+    }
+  },
+  "flag": 0,
+  "pageNum": 1
+}

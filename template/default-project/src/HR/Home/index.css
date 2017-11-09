@@ -1,0 +1,12 @@
+.loading-img {
+    width: 100%;
+    height: auto;
+    margin-top: 0.2rem;
+}
+.default-error {
+    margin-top: 0;
+}
+.default-error img {
+    width: 2rem;
+    height: 3rem;
+}
