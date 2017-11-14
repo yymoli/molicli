@@ -10,6 +10,12 @@ const chalk = require('chalk');
 const build = require('../lib/build');
 // 处理create命令
 const create = require('../lib/create');
+// 初始化project命令
+const init = require('../lib/init');
+// 处理npm run dev命令
+const dev = require('../lib/dev');
+// 处理npm run build命令
+const package = require('../lib/package');
 // 基于commander的命令行工具
 const program = require('commander');
 
@@ -34,6 +40,30 @@ program
     .action(function (projectName) {
         // validate projectName
         create.run(projectName);
+    });
+
+// init命令
+program
+    .command('init')
+    .description('init your moli project')
+    .action(function () {
+        init.run();
+    });
+
+// dev命令
+program
+    .command('dev')
+    .description('dev your moli project')
+    .action(function () {
+        dev.run();
+    });
+
+// package
+program
+    .command('package')
+    .description('package your moli project')
+    .action(function () {
+        package.run();
     });
 
 // build命令
