@@ -1,72 +1,74 @@
 {
-	"buildSetting":{
-		"appName":"moliProject",
-		"projectName":"moliProject",
-		"packageName":"com.yonyou.moli",
-		"versionName":"1.2.0",
-		"versionCode":"3",
-		"versionBuild":"1.0.0",
-		"debuggerEnable":"false",
-		"startPage":"html/index.html",
-		"reinforcement":"false",
-		"sandbox":"false",
-		"targetDevice":"",
-		"statusBarTheme":"",
-		"errorUrl":"",
-		"urlSchema":"",
-    	"queriesSchemes":"",
-    	"cordovaPlugins":[{
-    		"name":"cordova-plugin-compat",
-    		"parameters":[]
-    	}]
-	},
-    "orientation":"unspecified",
-    "statusBarStyle":"dark",
-    "navigationBarHidden":true,
-    "statusBarAppearance":true,
-    "fullScreen":false,
-    "messageIntercept":"message()",
-    "mDoctor":{
-        "openMDoctor":true,
-        "openPosition":true,
-        "wifiAutoSync":true,
-        "channelKey":"",
-        "appKey":""
-    },
-    "androidSetting":{
-        "showLaunch":true,
-        "webContentsDebuggingEnabled":true,
-        "autoHideLaunch":true,
-        "showCrashLog":false,
-        "openKeyBackListener":false
-    },
-    "launchOptions":{
-        "type": "tabBar",
-        "launchScript":"js/launch.js",
-		"autoHideLaunch":false
-    },
-    "actionBar":{
-        "title":"审批",
-        "titleColor":"",
-        "backgroundColor":"",
-        "leftItem":{
-            "image" : "",
-			"method" : ""
-        }
-    },
-    "params":{},
-    "packIncludeResource":[
-        "dist"
-    ],
-    "packExcludeResource":[
-        "config",
-        "native",
-        "ma",
-        "doc",
-        "document",
-        "lib",
-        "libs",
-        "config.xml"
-    ],
-    "publicResource":[]
+  "buildSetting": {
+    "appName": "moliProject",
+    "projectName": "moliProject",
+    "packageName": "com.yonyou.moli",
+    "versionName": "1.2.0",
+    "versionCode": "3",
+    "versionBuild": "1.0.0",
+    "debuggerEnable": "false",
+    "startPage": "html/index.html",
+    "reinforcement": "false",
+    "sandbox": "false",
+    "targetDevice": "",
+    "statusBarTheme": "",
+    "errorUrl": "",
+    "urlSchema": "",
+    "queriesSchemes": "",
+    "cordovaPlugins": [
+      {
+        "name": "cordova-plugin-compat",
+        "parameters": []
+      }
+    ]
+  },
+  "orientation": "unspecified",
+  "statusBarStyle": "dark",
+  "navigationBarHidden": true,
+  "statusBarAppearance": true,
+  "fullScreen": false,
+  "messageIntercept": "message()",
+  "mDoctor": {
+    "openMDoctor": true,
+    "openPosition": true,
+    "wifiAutoSync": true,
+    "channelKey": "",
+    "appKey": ""
+  },
+  "androidSetting": {
+    "showLaunch": true,
+    "webContentsDebuggingEnabled": true,
+    "autoHideLaunch": true,
+    "showCrashLog": false,
+    "openKeyBackListener": false
+  },
+  "launchOptions": {
+    "type": "tabBar",
+    "launchScript": "js/launch.js",
+    "autoHideLaunch": false
+  },
+  "actionBar": {
+    "title": "审批",
+    "titleColor": "",
+    "backgroundColor": "",
+    "leftItem": {
+      "image": "",
+      "method": ""
+    }
+  },
+  "params": {},
+  "packIncludeResource": [
+    "dist"
+  ],
+  "packExcludeResource": [
+    "config",
+    "native",
+    "ma",
+    "doc",
+    "document",
+    "lib",
+    "libs",
+    "config.xml"
+  ],
+  "publicResource": []
 }
