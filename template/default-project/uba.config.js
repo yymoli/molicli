@@ -21,7 +21,7 @@ const svrConfig = {
   port: 3000
 };
 const proxyConfig = [{
-  enable : true,//如果为true那么就是启用代理，mock会失效，为false的时候代理失效，mock生效
+  enable : false,//如果为true那么就是启用代理，mock会失效，为false的时候代理失效，mock生效
   router: "/",
 
   //url: "http://10.11.65.50:8080",

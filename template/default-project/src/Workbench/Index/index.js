@@ -17,7 +17,9 @@ class WorkSpace extends Component {
             data_params:{}
         }
     }
-
+    /**
+     *
+     */
     componentWillMount(){
         //debugger;
         if(window.data_params){
@@ -92,14 +94,14 @@ class WorkSpace extends Component {
         return (
             <div className="um-win">
                 <div className="um-header">
-                    
+
                     <h3>我的工作台</h3>
                 </div>
                 <div className="um-content">
                     <WgtPanel data={this.state.allData} metaData={this.state.metaData} changeFn = {this.changeFn}/>
                 </div>
                 <div className="um-footer">
-                    
+
                 </div>
             </div>
         )

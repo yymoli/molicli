@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ## 1.环境搭建及运行
 
@@ -36,7 +35,7 @@ npm run build
 - HR、FI等目录按是业务模块划分，一个应用组件（application component）对应一个文件夹，比如 FI、PO、Sales，名字可以由开发者自己命名，原则上该文件夹能代表一个应用组件。
 - static下面存放该工程可以被引用的公共静态资源，比如公共的js、css、图片等资源。有些只用于特定应用组件的静态资源，也可以放在对应的目录，不一定都要放在static下面。
 - component目录下就是用来存放可以被公共引用的UI组件（这里的组件都是基于React开发的组件），同时每一个应用组件目录下也可以有属于自身的component目录
-    
+
 ### 2.2 编码规范
 
 - 应用组件目录名及UI组件名统一使用**大驼峰**命名
@@ -110,11 +109,10 @@ const proxyConfig = [{
 
 `uba.config.js`内的`svrConfig`字段修改.
 
-=======
 # test
 ### 先安装moli(必要时加上sudo)
 
-$ sudo npm install uba -g 
+$ sudo npm install uba -g
 $ uba -v
 Version : 2.0.4
 ### 创建工程
@@ -124,4 +122,3 @@ $ moli init
 $ cd manage-demo
 $ npm run start
 访问项目首页，http://localhost:8080/
->>>>>>> d41d7cf1f894e672a98d942d2836d66cc4bbb50b
