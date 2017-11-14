@@ -13,8 +13,7 @@
     "fs-extra":"4.0.2",
     "commander": "2.11.0",
     "zip-local":"0.3.4",
-    "needle": "2.0.1",
-    "cross-spawn":"5.1.0"
+    "needle": "2.0.1"
   },
   "keywords": [
     "moli"

@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="99702a66-fbc0-4ecf-9d51-cd61cf2749bd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/dev.js" afterPath="$PROJECT_DIR$/lib/dev.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/init.js" afterPath="$PROJECT_DIR$/lib/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/package.js" afterPath="$PROJECT_DIR$/lib/package.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="289">
+              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -67,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/build.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="318">
@@ -130,10 +127,10 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/lib/create.js" />
         <option value="$PROJECT_DIR$/lib/build.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/lib/init.js" />
         <option value="$PROJECT_DIR$/lib/dev.js" />
         <option value="$PROJECT_DIR$/lib/package.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -158,8 +155,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="509" />
+    <option name="x" value="37" />
+    <option name="y" value="69" />
     <option name="width" value="1912" />
     <option name="height" value="1056" />
   </component>
@@ -352,7 +349,7 @@
       <workItem from="1510537169385" duration="11903000" />
       <workItem from="1510624054426" duration="4629000" />
       <workItem from="1510638602284" duration="2962000" />
-      <workItem from="1510649842350" duration="710000" />
+      <workItem from="1510649842350" duration="1192000" />
     </task>
     <task id="LOCAL-00001" summary="[update] 更新moli build command">
       <created>1509935281502</created>
@@ -452,11 +449,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510641642590</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[update] 更新支持windows">
+      <created>1510650570869</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1510650570869</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97511000" />
+    <option name="totallyTimeSpent" value="97993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -468,7 +472,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="509" width="1912" height="1056" extended-state="0" />
+    <frame x="37" y="69" width="1912" height="1056" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -517,7 +521,8 @@
     <MESSAGE value="[edit] 新增发送build指令和处理返回信息" />
     <MESSAGE value="[edit] 修改模板文件，可以run dev" />
     <MESSAGE value="[update] 分开npm命令" />
-    <option name="LAST_COMMIT_MESSAGE" value="[update] 分开npm命令" />
+    <MESSAGE value="[update] 更新支持windows" />
+    <option name="LAST_COMMIT_MESSAGE" value="[update] 更新支持windows" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -796,14 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/init.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -848,6 +845,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="48" column="41" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding />
         </state>
       </provider>
