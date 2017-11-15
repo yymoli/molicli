@@ -36,7 +36,7 @@ program
 // create命令
 program
     .command('create <projectName>')
-    .description('create your moli project')
+    .description('Create Your Moli Project')
     .action(function (projectName) {
         // validate projectName
         create.run(projectName);
@@ -45,7 +45,7 @@ program
 // init命令
 program
     .command('init')
-    .description('init your moli project')
+    .description('Init Your Moli Project')
     .action(function () {
         init.run();
     });
@@ -53,7 +53,7 @@ program
 // dev命令
 program
     .command('dev')
-    .description('dev your moli project')
+    .description('Dev Your Moli Project')
     .action(function () {
         dev.run();
     });
@@ -61,7 +61,7 @@ program
 // package
 program
     .command('package')
-    .description('package your moli project')
+    .description('Package Your Moli Project To Web')
     .action(function () {
         package.run();
     });
@@ -69,26 +69,23 @@ program
 // build命令
 program
     .command('build <platform>')
-    .option("-t,--type <type>", "build type package", "package")
-    .option("--release", "release mode")
-    .option("--debug", "debug mode")
-    .description('build your project with android/ios')
+    .option("-t,--type <type>", "App Build Type default package", "package")
+    .option("--release", "App Build Mode release-build")
+    .option("--debug", "App Build Mode debug-build")
+    .description('Build Your Moli Project To An App(android/ios)')
     .action(function (platform, options) {
         const buildType = options.type;
         if (platform == "ios" || platform == "android") {
-            console.log("platform " + platform + " buildType " + buildType);
+            console.log("Start Build App [" + platform + "]");
             if (options.release) {
-                console.log("this release build");
                 build.release(platform, buildType);
             } else if (options.debug) {
-                console.log("this debug build");
                 build.debug(platform, buildType);
             } else {
-                console.log("this release build");
                 build.release(platform, buildType);
             }
         } else {
-            console.log("build platform must be android/ios");
+            console.log(chalk.red("build <platform> Must Be android/ios"));
         }
 
     });
@@ -99,7 +96,9 @@ program.on('--help', function () {
     console.log('  Examples:');
     console.log('');
     console.log('    $ moli create hello');
-    console.log('    $ moli build -h');
+    console.log('    $ moli init');
+    console.log('    $ moli dev');
+    console.log('    $ moli package');
     console.log('    $ moli build ios --release');
     console.log('');
 });

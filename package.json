@@ -1,6 +1,6 @@
 {
   "name": "umoli",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "moli build test",
   "main": "./bin/moli.js",
   "scripts": {
