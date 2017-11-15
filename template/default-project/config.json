@@ -11,7 +11,7 @@
     "reinforcement": "false",
     "sandbox": "false",
     "targetDevice": "",
-    "statusBarTheme": "",
+    "statusBarTheme": "summer.Animations.NoTitleBar.FullScreen",
     "errorUrl": "",
     "urlSchema": "",
     "queriesSchemes": "",
