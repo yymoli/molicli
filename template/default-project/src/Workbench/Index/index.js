@@ -2,10 +2,9 @@ import React,{ Component} from 'react';
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
 import {ajax} from 'api/ajax.js';
-
 import appComponentManage from 'api/appComponentManager.js'
 import WgtPanel from '../components/WgtPanel/WgtPanel';
-
+import {Router,Route,IndexRoute,hashHistory,Link} from 'react-router';
 import "./index.css"
 class WorkSpace extends Component {
     constructor(props, context) {
@@ -17,9 +16,7 @@ class WorkSpace extends Component {
             data_params:{}
         }
     }
-    /**
-     *
-     */
+
     componentWillMount(){
         //debugger;
         if(window.data_params){
@@ -41,7 +38,6 @@ class WorkSpace extends Component {
             summer.on("ready", this.getData);
         }
     }
-
     getData = () => {
         let _this = this;
         // 这里应该是上一个页面传过来的
@@ -63,7 +59,6 @@ class WorkSpace extends Component {
                 _this.setState({
                     allData: allData
                 });
-
                 let metaData = data.metaData;
                 _this.setState({
                     metaData: metaData
@@ -92,20 +87,40 @@ class WorkSpace extends Component {
 
     render() {
         return (
-            <div className="um-win">
+            /*<div className="um-win">
                 <div className="um-header">
-
+                    
                     <h3>我的工作台</h3>
+            					<div style={{color: 'white',backgroundColor:'#ffffff'}}>
+            	                    <Link to="/">--主页--</Link>
+            	                    <Link to="/Story">--个人信息--</Link>
+            	                    <Link to="/Travel">--系统设置</Link>
+                    </div>
                 </div>
-                <div className="um-content">
-                    <WgtPanel data={this.state.allData} metaData={this.state.metaData} changeFn = {this.changeFn}/>
+            
+            				 <div className="um-content">
+                     {this.props.children}    
                 </div>
                 <div className="um-footer">
-
+                    
                 </div>
-            </div>
+            </div> */
+           <div >
+           		{this.props.children}    
+           </div>
+            
         )
     }
 }
 
-ReactDOM.render(<WorkSpace/>, document.querySelector("#app"))
+//ReactDOM.render(<WorkSpace/>, document.querySelector("#app"))
+ReactDOM.render((
+    <Router history={hashHistory}>
+        <Route exact path="/" component={WorkSpace}>
+               <IndexRoute component={WgtPanel}/>
+				 
+        </Route>
+    </Router>
+    ),document.body
+);
+

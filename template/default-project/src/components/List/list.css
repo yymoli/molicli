@@ -98,20 +98,23 @@ html,.um-frame{
   text-align: center;
   border-bottom: 1px solid #c0c0c0;
 }
-.content div.um-box{
+ .um-line{
   border-bottom: 1px solid #c0c0c0;
   font-size:14px;
 }
-.content div.um-box:nth-of-type(even){
+.um-line:nth-of-type(even){
   background: #fdfcfc;
 }
-.content div.um-box:hover{
+.um-line:hover{
   background: #f4f4f4;
 }
-.content div.um-box div{
+.um-line div{
   padding:8px 0;
 }
 .content img{
   width:50px;
   height:50px;
+}
+.none{
+	display:none;
 }

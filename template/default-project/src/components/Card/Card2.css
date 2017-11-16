@@ -1,0 +1,27 @@
+.um-list-item-left{
+  font-size:14px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left:5px;
+  line-height:40px;
+  margin-right:10px;
+}
+.form-control{
+  font-size:14px;
+}
+.um-list-item-inner{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.um-list-item-right img{
+  display: inline-block;
+  width:50px;
+  height:50px;
+}
+.um-xs-1, .um-sm-1, .um-md-1, .um-lg-1, .um-xs-2, .um-sm-2, .um-md-2, .um-lg-2, .um-xs-3, .um-sm-3, .um-md-3, .um-lg-3, .um-xs-4, .um-sm-4, .um-md-4, .um-lg-4, .um-xs-5, .um-sm-5, .um-md-5, .um-lg-5, .um-xs-6, .um-sm-6, .um-md-6, .um-lg-6, .um-xs-7, .um-sm-7, .um-md-7, .um-lg-7, .um-xs-8, .um-sm-8, .um-md-8, .um-lg-8, .um-xs-9, .um-sm-9, .um-md-9, .um-lg-9, .um-xs-10, .um-sm-10, .um-md-10, .um-lg-10, .um-xs-11, .um-sm-11, .um-md-11, .um-lg-11, .um-xs-12, .um-sm-12, .um-md-12, .um-lg-12{
+  padding-left: 0;
+}
+.um-row{
+  margin-top: 20px;
+}

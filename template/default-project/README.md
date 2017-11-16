@@ -1,5 +1,5 @@
 
-## 1.环境搭建及运行
+## 1.预览
 
 安装依赖包
 
@@ -31,14 +31,13 @@ npm run build
 
 **src下的目录说明及规范：**
 
-- Workbench目录下面是工作台代码，工作台本身也是一个应用组件。
-- HR、FI等目录按是业务模块划分，一个应用组件（application component）对应一个文件夹，比如 FI、PO、Sales，名字可以由开发者自己命名，原则上该文件夹能代表一个应用组件。
-- static下面存放该工程可以被引用的公共静态资源，比如公共的js、css、图片等资源。有些只用于特定应用组件的静态资源，也可以放在对应的目录，不一定都要放在static下面。
-- component目录下就是用来存放可以被公共引用的UI组件（这里的组件都是基于React开发的组件），同时每一个应用组件目录下也可以有属于自身的component目录
+- pages目录下面的文件夹按业务模块划分，一个业务模块一个文件夹，比如 Shop，下面就专门放兑换中心的页面，比如Account，就专门放跟用户相关的。
+- assets下面存放公共的静态资源，比如公共的js、css、图片等资源。但是只用于业务模块的静态资源，就近放在对应的目录即可，不需要放在assets下面。
+- 基于React的项目下，所有业务都是组件，只是有业务组件和公共组件的区分，智能组件和木偶组件的区分。component目录下就是用来存放公共的组件（超过两个页面用到），业务模块下面也可以有component目录，这下面存放的是业务组件
 
 ### 2.2 编码规范
 
-- 应用组件目录名及UI组件名统一使用**大驼峰**命名
+- 组件目录名及组件名统一使用**大驼峰**命名
 - 如果有样式冲突，可以基于webpack的css-loader实现css-modules
 - 统一配置缩进为**两个**空格
 
@@ -52,11 +51,11 @@ npm run build
 
 ### 3.1 调试服务
 
-调试使用`npm run dev`.(安装调试工具`uba`命令：`npm i uba -g`).
+关于项目调试可以使用全局`uba server`或者项目自带`npm run dev`去运行.(安装调试工具`uba`命令：`npm i uba -g`).
 
 ### 3.2 构建打包
 
-使用命令 `npm run build`即可打包产出资源.默认会自动产出一个public目录.
+可以使用命令`uba build` 或者 `npm run build`即可打包产出资源.
 
 
 ### 3.3 模拟数据
@@ -109,16 +108,10 @@ const proxyConfig = [{
 
 `uba.config.js`内的`svrConfig`字段修改.
 
-# test
-### 先安装moli(必要时加上sudo)
+### 3.6 多页面设置
 
-$ sudo npm install uba -g
-$ uba -v
-Version : 2.0.4
-### 创建工程
-$ moli init
+`src/pages/*`里面的文件是我们的多页面结构，`index`文件夹对外访问就是`http://localhost:3000/index.html`.`user/login/*`就是`http://localhost:3000/user/login.html`
 
-### 进入应用，启动项目
-$ cd manage-demo
-$ npm run start
-访问项目首页，http://localhost:8080/
+只要按照这样的约束就可以产出多页面结构的页面.
+
+`static`里面可以存放静态公共引用的JS、CSS、IMG. `components`里面是组件类.

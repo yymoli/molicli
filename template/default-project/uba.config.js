@@ -21,12 +21,14 @@ const svrConfig = {
   port: 3000
 };
 const proxyConfig = [{
-  enable : false,//如果为true那么就是启用代理，mock会失效，为false的时候代理失效，mock生效
+  enable : true,//如果为true那么就是启用代理，mock会失效，为false的时候代理失效，mock生效
+  //enable : false,//如果为true那么就是启用代理，mock会失效，为false的时候代理失效，mock生效
   router: "/",
 
   //url: "http://10.11.65.50:8080",
   //url: "https://wstest.yonyoucloud.com",
-    url: "http://172.20.7.97:8900",
+    //url: "http://172.20.7.97:8900",
+    url:"http://10.3.13.7:8091",
     //url:"http://172.27.35.1:8900",
 
   options : {
@@ -130,7 +132,8 @@ var devConfig = {
       assets: path.resolve(__dirname, 'src/assets/'),
       api: path.resolve(__dirname, 'src/api/'),
       mock: path.resolve(__dirname, 'mock/'),
-      config: path.resolve(__dirname, 'src/config/')
+      config: path.resolve(__dirname, 'src/config/'),
+	  widget : path.resolve(__dirname,`src/components/${process.env.NODE_ENV}`)
     }
   }
 }
@@ -145,7 +148,7 @@ var prodConfig = {
   //devtool: 'cheap-module-source-map',   //压缩注释
   entry: prodEntries,
   output: {
-    path: path.resolve(__dirname, './public'),
+    path: path.resolve(__dirname, `./public/${process.env.NODE_ENV}`),
     filename: 'assets/js/[name].js',
     publicPath: '../'
   },
@@ -231,7 +234,8 @@ var prodConfig = {
       assets: path.resolve(__dirname, 'src/assets/'),
       api: path.resolve(__dirname, 'src/api/'),
       mock: path.resolve(__dirname, 'mock/'),
-      config: path.resolve(__dirname, 'src/config/')
+      config: path.resolve(__dirname, 'src/config/'),
+	  widget : path.resolve(__dirname,`src/components/${process.env.NODE_ENV}`)
     }
   }
 }

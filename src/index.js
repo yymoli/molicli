@@ -14,8 +14,6 @@ const create = require('../lib/create');
 const init = require('../lib/init');
 // 处理npm run dev命令
 const dev = require('../lib/dev');
-// 处理npm run build命令
-const package = require('../lib/package');
 // 基于commander的命令行工具
 const program = require('commander');
 
@@ -52,42 +50,37 @@ program
 
 // dev命令
 program
-    .command('dev')
-    .description('Dev Your Moli Project')
-    .action(function () {
-        dev.run();
-    });
-
-// package
-program
-    .command('package')
-    .description('Package Your Moli Project To Web')
-    .action(function () {
-        package.run();
+    .command('dev <platform>')
+    .description('Dev Your Moli Project (web/mobile)')
+    .action(function (platform, options) {
+        if (platform == "web" || platform == "mobile") {
+            console.log("Start Run Dev [" + platform + "]");
+            dev.run(platform);
+        } else {
+            console.log(chalk.red("build <platform> Must Be web/mobile/android/ios"));
+        }
     });
 
 // build命令
 program
     .command('build <platform>')
-    .option("-t,--type <type>", "App Build Type default package", "package")
-    .option("--release", "App Build Mode release-build")
-    .option("--debug", "App Build Mode debug-build")
-    .description('Build Your Moli Project To An App(android/ios)')
+    .option("--server", "App Build From Build Server")
+    .description('Package/Build Your Moli Project To An App(android/ios)')
     .action(function (platform, options) {
-        const buildType = options.type;
         if (platform == "ios" || platform == "android") {
             console.log("Start Build App [" + platform + "]");
-            if (options.release) {
-                build.release(platform, buildType);
-            } else if (options.debug) {
-                build.debug(platform, buildType);
+            if (options.server) {
+                build.server(platform);
             } else {
-                build.release(platform, buildType);
+                build.locate(platform);
             }
-        } else {
-            console.log(chalk.red("build <platform> Must Be android/ios"));
+        } else if(platform == "web"){
+            build.locate(platform);
+        } else if(platform == "mobile"){
+            build.locate(platform);
+        } else{
+            console.log(chalk.red("build <platform> Must Be web/mobile/android/ios"));
         }
-
     });
 
 // 帮助命令
@@ -97,9 +90,9 @@ program.on('--help', function () {
     console.log('');
     console.log('    $ moli create hello');
     console.log('    $ moli init');
-    console.log('    $ moli dev');
-    console.log('    $ moli package');
-    console.log('    $ moli build ios --release');
+    console.log('    $ moli dev mobile');
+    console.log('    $ moli build mobile');
+    console.log('    $ moli build ios --server');
     console.log('');
 });
 

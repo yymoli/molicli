@@ -210,7 +210,7 @@
             }(),
             lang:(navigator.browserLanguage || navigator.language).toLowerCase()
         };
-		if(browser.info.platform.toLowerCase().indexOf("win")>= 0 || browser.info.platform.toLowerCase().indexOf("mac")>= 0 || browser.info.platform.toLowerCase().indexOf("linux x86")>= 0){
+		if(browser.info.platform.toLowerCase().indexOf("win")>= 0 || browser.info.platform.toLowerCase().indexOf("mac")>= 0){
 		    return "pc";
 		}else if(browser.info.android){
             return "android";
@@ -1629,7 +1629,7 @@
 	};
 
     s.openComponent = function(params){
-        if($summer.os =="ios" || $summer.os =="android"){
+        if(!$summer.os == "pc"){
             summer.callService("YUC.open", params);
         }else if($summer.os == "pc"){
             if(!appComponentManager){

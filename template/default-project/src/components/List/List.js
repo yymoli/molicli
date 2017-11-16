@@ -1,6 +1,10 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
+import Card  from 'widget/Card/Card'
+//import CardPc from '../../components/Card/CardPc'
+ 
+import {Router,Route,IndexRoute,hashHistory,Link} from 'react-router';
 
 import './list.css';
 
@@ -21,6 +25,12 @@ class ContentList extends Component {
         }
     }
 
+    componentDidMount() {
+        let metaData = this.props.metaData;
+        this.setState({
+            metaData: metaData
+        })
+    }
     componentWillReceiveProps(nextProps) {
         let metaData = nextProps.metaData;
         this.setState({
@@ -28,9 +38,6 @@ class ContentList extends Component {
         })
     }
 
-    componentWillMount() {
-
-    }
     openWin = (r) => {
         let _this = this;
         return function () {
@@ -40,63 +47,149 @@ class ContentList extends Component {
     }
     renderHeader = () => {
         var _this = this;
-        let headerArr =
-        <div className="um-box">
-            <div className="th1 um-bf1">头像</div>
-            <div className="th2 um-bf2">姓名</div>
-            <div className="th3 um-bf2">手机号</div>
-            <div className="th4 um-bf2">公司邮箱</div>
-            <div className="th5 um-bf2">公司</div>
+        let metaData = _this.props.metaData
+        //元数据title
+        let name_title = "姓名";
+        if(metaData&&metaData.name_title&&metaData.name_title.name)
+            name_title = metaData.name_title.name;
+        
+		let name_style=metaData.name_title.name
+        let phone_title = "手机号";
+        if(metaData&&metaData.phone_title&&metaData.phone_title.name){
+            phone_title = metaData.phone_title.name;
+        }
+
+        let avatar_title = "头像";
+        if(metaData&&metaData.avatar_title&&metaData.avatar_title.name){
+            avatar_title = metaData.avatar_title.name;
+        }
+
+        let departmentName_title = "部门";
+        if(metaData&&metaData.departmentName&& metaData.departmentName.name){
+            departmentName_title = metaData.departmentName.name;
+        }
+        //元数据class
+        let classStyle1="th1 um-bf1";
+        if(metaData.avatar_title&&metaData.avatar_title.display){
+        	classStyle1 = metaData.avatar_title.display=="none"?"th1 um-bf1 none":"th1 um-bf1";
+        };
+        let classStyle2="th1 um-bf1";
+        if(metaData.name_title&&metaData.name_title.display){
+        	classStyle2 = metaData.name_title.display=="none"?"th1 um-bf1 none":"th1 um-bf1";
+        };
+        let classStyle3="th1 um-bf1";
+        if(metaData.phone_title&&metaData.phone_title.display){
+        	classStyle3 = metaData.phone_title.display=="none"?"th1 um-bf1 none":"th1 um-bf1";
+        };
+        let classStyle4="th1 um-bf1";
+        if(metaData.departmentName&&metaData.departmentName.display){
+        	classStyle4 = metaData.departmentName.display=="none"?"th1 um-bf1 none":"th1 um-bf1";
+        }
+        //元数据样式
+         let avatar_title_style="";
+        if(metaData&&metaData.avatar_title&&metaData.avatar_title.style){
+        	avatar_title_style=JSON.parse(metaData.avatar_title.style);
+        }
+        let name_title_style="";
+        if(metaData&&metaData.avatar_title&&metaData.avatar_title.style){
+        	name_title_style=JSON.parse(metaData.name_title.style);
+        }
+        let phone_title_style="";
+        if(metaData&&metaData.avatar_title&&metaData.avatar_title.style){
+        	phone_title_style=JSON.parse(metaData.phone_title.style);
+        }
+        let departmentName_title_style="";
+        if(metaData&&metaData.avatar_title&&metaData.avatar_title.style){
+        	departmentName_title_style=JSON.parse(metaData.departmentName.style);
+        }
+        let headerArr =  
+         <div className="um-box">
+            <div className={classStyle1} style={avatar_title_style}>{avatar_title}</div>
+            <div className={classStyle2} style={name_title_style}>{name_title}</div>
+            <div className={classStyle3} style={phone_title_style}>{phone_title}</div>
+            <div className={classStyle4} style={departmentName_title_style}>{departmentName_title}</div>
         </div>
+    /*    metadata.map(function (item, index) {
+				if(!_this.state.metaData){
+                    _this.state.metaData = {};
+                }
+                if(!_this.state.metaData.title){
+                    _this.state.metaData.title = {};
+                }
+                if(!_this.state.metaData.name){
+                    _this.state.metaData.name = {};
+                }
+                if(!_this.state.metaData.phone){
+                    _this.state.metaData.phone = {};
+                }
+                headerArr.push(
+                      <div className="th1 um-bf1"  style={item.style}>{item.title}</div>
+                );
+        });*/
         return headerArr;
     }
     renderTabContent = () => {
         let _this = this;
         let data = this.props.data;
-
+		 let metaData = _this.props.metaData
         let tabContentArray = [];
         data.map(function (item, index) {
-            if(_this.state.metaData.clientType != "pc"){
-                if(!_this.state.metaData.com){
-                    _this.state.metaData.com = {};
-                }
-                if(!_this.state.metaData.com.userName){
-                    _this.state.metaData.com.userName = {};
-                }
-                if(!_this.state.metaData.com.companyName){
-                    _this.state.metaData.com.companyName = {};
-                }
-                if(!_this.state.metaData.com.mobile){
-                    _this.state.metaData.com.mobile = {};
-                }
+            if($summer.os != "pc"){
+            	let classStyleDisplay1="";
+	           if(metaData&&metaData.avatar_title&&metaData.avatar_title.display)
+	            classStyleDisplay1 = metaData.avatar_title.display;
+	            let classStyleDisplay2="";
+	           if(metaData&&metaData.name_title&&metaData.name_title.display)
+	            classStyleDisplay2 = metaData.name_title.display;
+	            let classStyleDisplay3="";
+	           if(metaData&&metaData.phone_title&&metaData.phone_title.display)
+	            classStyleDisplay3 = metaData.phone_title.display;
+	            let classStyleDisplay4="";
+	           if(metaData&&metaData.departmentName&&metaData.departmentName.display)
+	            classStyle4 = metaData.departmentName.display=="none"?"td1 um-bf1 um-box-center none":"td1 um-bf1 um-box-center";
+                 
+       
                 tabContentArray.push(
-                    <div key={index} onClick={_this.openWin(item)} className="list-item">
+                   <Link key={index} to={{pathname:"/Card" ,query:{item:JSON.stringify(item)}}} className="list-item">
                         <div className="list-item-inner um-box-center">
-                            <div className="ibox">
+                            <div className="ibox" className={classStyleDisplay1}   >
                                 <img src={item.avatar} alt=""/>
                             </div>
                             <div className="cbox">
                                 <dl>
-                                    <dt style={_this.state.metaData.com.userName}>{item.userName}</dt>
-                                    <dt className="company-name" style={_this.state.metaData.com.companyName}>{item.companyName}</dt>
-                                    <dt style={_this.state.metaData.com.mobile}>{item.mobile}</dt>
+                                    <dt style={_this.state.metaData.name} className={classStyleDisplay2} >{item.name}</dt>
+                                    <dt  className={classStyleDisplay3} style={_this.state.metaData.departmentName}>{item.departmentName}</dt>
+                                    <dt className={classStyleDisplay4} style={_this.state.metaData.phone}>{item.phone}</dt>
                                 </dl>
 
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 );
             }else{
+				let classStyle1="td1 um-bf1 um-box-center";
+	           if(metaData&&metaData.avatar_title&&metaData.avatar_title.display)
+	           		classStyle1 = metaData.avatar_title.display=="none"?"td1 um-bf1 um-box-center none":"td1 um-bf1 um-box-center";
+	            let classStyle2="td1 um-bf1 um-box-center";
+	           if(metaData&&metaData.name_title&&metaData.name_title.display)
+	            classStyle2 = metaData.name_title.display=="none"?"td1 um-bf1 um-box-center none":"td1 um-bf1 um-box-center";
+	            let classStyle3="td1 um-bf1 um-box-center";
+	           if(metaData&&metaData.phone_title&&metaData.phone_title.display)
+	            classStyle3 = metaData.phone_title.display=="none"?"td1 um-bf1 um-box-center none":"td1 um-bf1 um-box-center";
+	            let classStyle4="td1 um-bf1 um-box-center";
+	           if(metaData&&metaData.departmentName&&metaData.departmentName.display)
+	            classStyle4 = metaData.departmentName.display=="none"?"td1 um-bf1 um-box-center none":"td1 um-bf1 um-box-center";
+                 
                 tabContentArray.push(
-                    <div key={index} onClick={_this.openWin(item)} className="um-box">
-                        <div className="td1 um-bf1 um-box-center">
-                            <img src={item.avatar} alt=""/>
+                    <Link key={index}  to={{pathname:"/Card" ,query:{item:JSON.stringify(item)}}}  className="um-box um-line">
+                          
+                        <div className={classStyle1}   >
+                            <img src={item.avatar} alt=""/ >
                         </div>
-                        <div className="td2 um-bf2 um-box-center" style={_this.state.metaData.com.name}>{item.name ? item.name : "..."}</div>
-                        <div className="td3 um-bf2 um-box-center">{item.mobile ? item.mobile : "..."}</div>
-                        <div className="td4 um-bf2 um-box-center">{item.email ? item.email : "..."}</div>
-                        <div className="td5 um-bf2 um-box-center">{item.companyName}</div>
-                    </div>
+                        <div className={classStyle2}   >{item.name ? item.name : "..."}</div>
+                        <div className={classStyle4}   >{item.phone ? item.phone : "..."}</div>
+                         <div className={classStyle3}   >{item.departmentName}</div>
+                    </Link>
                 );
             }
         });
@@ -112,18 +205,22 @@ class ContentList extends Component {
         return (
             <div className="list um-content">
                 <div className="header">
-                    {header}
+                
+                    	{header}
+                 
                 </div>
                 <div className="content">
-                    {this.renderTabContent()}
+                        {this.renderTabContent()}
                 </div>
             </div>
-        )
+        );
+        
     }
-}
-
+};
 ContentList.propTypes = {
     data: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
 }
+ 
 
+ 
 export default ContentList;

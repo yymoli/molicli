@@ -2,7 +2,8 @@ import React,{ Component} from 'react';
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom';
 import {ajax} from 'api/ajax.js';
-import Card from '../../components/Card/Card';
+import CardMobile from '../../components/Card/CardMobile'
+import CardPc from '../../components/Card/CardPc'
 
 import "./index.css"
 class ContactsDetails extends Component {

@@ -62,6 +62,7 @@ class ComponentManager {
 
     openComponent(params){
         //执行指定组件的一个Action
+        
         if($summer.os != "pc"){
             summer.openComponent(params);
             return false;
